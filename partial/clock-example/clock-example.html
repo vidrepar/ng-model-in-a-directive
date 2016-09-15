@@ -1,0 +1,25 @@
+<div class="col-md-12" ng-controller="ClockExampleCtrl">
+
+    <form name="timeForm">
+
+        <svg width="1000" height="1000">
+
+            <!-- here we bind our clock to item.time -->
+            <g clock-input
+               ng-model="item-time"
+               name="time">
+            </g>
+
+            <!-- view the value of our input -->
+            <text x="500" y="500">
+                {{ item.time | date:"shortTime" }}
+            </text>
+            <text x="500" y="550">
+                {{ ticking ? "Stop" : "Start" }}
+            </text>
+
+        </svg>
+
+    </form>
+
+</div>
